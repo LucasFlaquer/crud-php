@@ -17,8 +17,12 @@
   
   /** caminho no server para o sistema **/	
     if ( !defined('BASEURL') )
-      define('BASEURL', 'localhost');
+      define('BASEURL', '');
   
   /** caminho do arquivo de banco de dados **/
     if ( !defined('DBAPI') )
       define('DBAPI', ABSPATH . 'inc/database.php');
+
+  define('HEADER_TEMPLATE', ABSPATH . 'inc/header.php');	
+  define('FOOTER_TEMPLATE', ABSPATH . 'inc/footer.php');
+?>
