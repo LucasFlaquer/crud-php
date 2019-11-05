@@ -1,6 +1,6 @@
 <?php
   /** O nome do banco de dados*/	
-  define('DB_NAME', 'estudo');
+  define('DB_NAME', 'test');
   
   /** Usuário do banco de dados MySQL */	
   define('DB_USER', 'root');		
