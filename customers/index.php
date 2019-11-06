@@ -27,34 +27,35 @@
 <?php endif; ?>	
 <hr>	
 <table class="table table-hover">
-<thead>
-<tr>			
-  <th>ID</th>		
-	<th width="30%">Nome</th>		
-	<th>CPF/CNPJ</th>		
-  	<th>Telefone</th>		
+  <thead>
+    <tr>			
+      <th>ID</th>		
+	    <th width="30%">Nome</th>		
+	    <th>CPF/CNPJ</th>		
+      <th>Telefone</th>		
     	<th>Atualizado em</th>			
-      <th>Opções</th>		</tr>	
-      </thead>
-      <tbody>	
-        <?php if ($customers) : ?>
-          <?php foreach ($customers as $customer) : ?>
-            <tr>
-              <td><?php echo $customer['id']; ?></td>			
-              <td><?php echo $customer['name']; ?></td>			
-              <td><?php echo $customer['cpf_cnpj']; ?></td>
-              <td>00 0000-0000</td>
-              <td><?php echo $customer['modified']; ?></td>
-              <td class="actions text-right">			
-                <a href="view.php?id=<?php echo $customer['id']; ?>" class="btn btn-sm btn-success"><i class="fa fa-eye"></i> Visualizar</a>				
-                <a href="edit.php?id=<?php echo $customer['id']; ?>" class="btn btn-sm btn-warning"><i class="fa fa-pencil"></i> Editar</a>	
-                <a href="#" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#delete-modal" data-customer="<?php echo $customer['id']; ?>">					<i class="fa fa-trash"></i> Excluir				</a>
-              </td>
-            </tr>
-          <?php endforeach; ?>	
-        <?php else : ?>
-          <tr><td colspan="6">Nenhum registro encontrado.</td>		</tr>	<?php endif; ?>	
-        </tbody>
-    	</table>	
+      <th>Opções</th>
+    </tr>	
+  </thead>
+  <tbody>	
+  <?php if ($customers) : ?>
+    <?php foreach ($customers as $customer) : ?>
+      <tr>
+        <td><?php echo $customer['id']; ?></td>			
+        <td><?php echo $customer['name']; ?></td>			
+        <td><?php echo $customer['cpf_cnpj']; ?></td>
+        <td>00 0000-0000</td>
+        <td><?php echo $customer['modified']; ?></td>
+        <td class="actions text-right">			
+          <a href="view.php?id=<?php echo $customer['id']; ?>" class="btn btn-sm btn-success"><i class="fa fa-eye"></i> Visualizar</a>				
+          <a href="edit.php?id=<?php echo $customer['id']; ?>" class="btn btn-sm btn-warning"><i class="fa fa-pencil"></i> Editar</a>	
+        <a href="#" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#delete-modal" data-customer="<?php echo $customer['id']; ?>">					<i class="fa fa-trash"></i> Excluir				</a>
+        </td>
+      </tr>
+    <?php endforeach; ?>	
+  <?php else : ?>
+    <tr><td colspan="6">Nenhum registro encontrado.</td>		</tr>	<?php endif; ?>	
+  </tbody>
+</table>	
 
 <?php include(FOOTER_TEMPLATE); ?>
