@@ -1,6 +1,6 @@
 <?php
   /** O nome do banco de dados*/	
-  define('DB_NAME', 'test');
+  define('DB_NAME', 'estudo');
   
   /** Usuário do banco de dados MySQL */	
   define('DB_USER', 'root');		
@@ -17,7 +17,7 @@
   
   /** caminho no server para o sistema **/	
     if ( !defined('BASEURL') )
-      define('BASEURL', '');
+      define('BASEURL', 'crud-php/');
   
   /** caminho do arquivo de banco de dados **/
     if ( !defined('DBAPI') )

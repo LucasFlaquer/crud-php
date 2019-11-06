@@ -4,6 +4,7 @@
       <meta charset="utf-8">	    
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
       <title>CRUD com Bootstrap</title>
+      <base href="localhost">
       <meta name="description" content="">	    
       <meta name="viewport" content="width=device-width, initial-scale=1">	
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -26,7 +27,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>	          
-            <a href="<?php echo BASEURL; ?>index.php" class="navbar-brand">CRUD</a>
+            <a href="/<?php echo BASEURL; ?>index.php" class="navbar-brand">CRUD</a>
           </div>
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">          	            
