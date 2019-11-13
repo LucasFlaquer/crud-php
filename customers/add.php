@@ -59,7 +59,7 @@
     </div>	   
     <div class="form-group col-md-2">	  
       <label for="campo3">Inscrição Estadual</label>	    
-      <input type="text" class="form-control" name="customer['ie']">	  
+      <input type="text" class="form-control" name="customer['ie']">
     </div>	   
     <div class="form-group col-md-2">
       <label for="campo3">UF</label>	  

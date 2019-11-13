@@ -23,11 +23,10 @@
     $found = null;
     try {
       if($id) {
-        $sql  = "SELECT * FROM" . $table . "WHERE ID = " .$id;
+        $sql  = "SELECT * FROM " . $table . " WHERE ID = " .$id;
         $result = $database->query($sql);
-        if($result > 0)
-          $found  = $result->fetch_assoc();
-
+        if($result->num_rows > 0)
+        $found  = $result->fetch_assoc();
       } else {
         $sql = "SELECT * FROM " . $table;
         $result = $database->query($sql);		    		    
@@ -39,7 +38,8 @@
         $_SESSION['message'] = $e->GetMessage();
         $_SESSION['type'] = 'danger';	  
     }				
-    close_database($database);		return $found;
+    close_database($database);		
+    return $found;
   }
   function find_all($table) {
     return find($table);
@@ -55,7 +55,7 @@
     }
     $columns = rtrim($columns, ',');
     $values = rtrim($values, ',');
-    $sql = "INSERT INTO " . $table . "($columns)" . " VALUES " . ",7;";
+    $sql = "INSERT INTO " . $table . "($columns)" . " VALUES " . "($values);";
 	  try {
       $database->query($sql);
       $_SESSION['message'] = 'Registro cadastrado com sucesso.';
